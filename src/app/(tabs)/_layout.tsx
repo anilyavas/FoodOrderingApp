@@ -2,7 +2,6 @@ import React from 'react';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Link, Tabs } from 'expo-router';
 import { Pressable } from 'react-native';
-import { Stack } from 'expo-router';
 import Colors from '@/constants/Colors';
 import { useColorScheme } from '@/components/useColorScheme';
 import { useClientOnlyValue } from '@/components/useClientOnlyValue';
@@ -28,7 +27,7 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
-        name='index'
+        name='menu'
         options={{
           title: 'Menu',
           tabBarIcon: ({ color }) => (
@@ -57,6 +56,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <TabBarIcon name='list' color={color} />,
         }}
       />
+      <Tabs.Screen name='index' options={{ href: null }} />
     </Tabs>
   );
 }
