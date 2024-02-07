@@ -8,7 +8,7 @@ type ProductListItemProps = {
 };
 const ProductListItem = ({ product }: ProductListItemProps) => {
   return (
-    <View>
+    <View style={styles.container}>
       <Image
         source={{
           uri:
@@ -27,6 +27,9 @@ const ProductListItem = ({ product }: ProductListItemProps) => {
 export default ProductListItem;
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   image: {
     width: '100%',
     aspectRatio: 1,
