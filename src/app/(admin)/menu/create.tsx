@@ -4,6 +4,7 @@ import Button from '@/components/Button';
 import { defaultPizzaImage } from '@/components/ProductListItem';
 import Colors from '@/constants/Colors';
 import * as ImagePicker from 'expo-image-picker';
+import { Stack } from 'expo-router';
 
 const CreateProductScreen = () => {
   const [name, setName] = useState('');
@@ -57,6 +58,7 @@ const CreateProductScreen = () => {
   };
   return (
     <View style={styles.container}>
+      <Stack.Screen options={{ title: 'Create Product' }} />
       <Image
         source={{ uri: image || defaultPizzaImage }}
         style={styles.image}
