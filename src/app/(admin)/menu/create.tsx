@@ -14,6 +14,7 @@ const CreateProductScreen = () => {
   };
 
   const validateInput = () => {
+    setErrors('');
     if (!name) {
       setErrors('Name is required');
       return false;
