@@ -1,8 +1,12 @@
 import { View } from 'react-native';
 import Button from '@/components/Button';
 import { Link } from 'expo-router';
+import { useAuth } from '@/providers/AuthProvider';
 
 const index = () => {
+  const { session } = useAuth();
+
+  console.log(session);
   return (
     <View style={{ flex: 1, justifyContent: 'center', padding: 10 }}>
       <Link href={'/(user)'} asChild>
